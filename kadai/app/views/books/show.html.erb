@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<div class = "panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title"><%= @book.title %>
+      <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-sm btn-default pull-right'%>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <dl  class="dl-horizontal">
+      <dt>Isbn:</dt>
+      <dd><%= @book.isbn %></dd>
+      <dt>Price:</dt>
+      <dd><%= @book.price %></dd>
+      <dt>Publish:</dt>
+      <dd><%= @book.publish %></dd>
+      <dt>Published:</dt>
+      <dd><%= @book.published %></dd>
+      <dt>Dl:</dt>
+      <dd><%= @book.dl %></dd>
+    </dl>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'New Review', new_book_review_path(@book), class: 'btn btn-sm btn-primary'%>
+    <%= link_to 'Back', books_path, class: 'btn btn-sm btn-primary'%>
+  </div>
+</div>
